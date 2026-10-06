@@ -82,7 +82,7 @@ Figures and tables are not floats inside a box: use `\includegraphics` and `\cap
 The template uses **UCL Sans** for body text and **UCL Sans SemiBold** for the title, authors and headings. The class looks for the font in this order and prints the one it used at the end of the log (`uclposter: text font = ...`):
 
 1. UCL Sans installed on the computer;
-2. the files in `fonts/` (`UCLSans-Regular`, `-Italic`, `-SemiBold`, `-SemiBoldItalic`);
+2. the files in `fonts/` (`UCLSans-Regular`, `-Italic`, `-Bold`, `-SemiBold`, `-SemiBoldItalic`, `-ExtraLight`, `-ExtraLightItalic`);
 3. Aptos, UCL's stated fallback;
 4. TeX Gyre Heros, with a warning.
 
