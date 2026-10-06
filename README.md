@@ -2,7 +2,7 @@
 
 A LaTeX class for research posters that resemble UCL's current A0 portrait PowerPoint template (`UCL-A0_Poster_Template-Portrait.pptx`: new logo, UCL Sans, dark purple banner).
 
-**Unofficial.** This template not produced or endorsed by UCL, UCL provides poster templates in PowerPoint format (.pptx) through the [UCL Brand resources](https://imagestore.ucl.ac.uk/imagestore/files/ucl-new-templates/UCL/UCL%20A0%20Academic%20Posters/UCL-A0%20Poster%20Template-Portrait.pptx). However, it does not provide LaTeX poster templates. This repository provides a recreation that follows UCL's Brand Guidelines for students and staff who prefer LaTeX.
+**Unofficial.** This template is not produced or endorsed by UCL. UCL provides poster templates in PowerPoint format (.pptx) through the [UCL Brand resources](https://imagestore.ucl.ac.uk/imagestore/files/ucl-new-templates/UCL/UCL%20A0%20Academic%20Posters/UCL-A0%20Poster%20Template-Portrait.pptx), but no LaTeX templates. This repository is a recreation that follows UCL's brand guidelines, for students and staff who prefer LaTeX.
 
 <img src="preview.png" alt="Example poster" width="420">
 
@@ -18,16 +18,16 @@ A LaTeX class for research posters that resemble UCL's current A0 portrait Power
 
 pdfLaTeX also compiles the poster, but it cannot load UCL Sans and falls back to a Helvetica clone, so the result is not on brand.
 
-Requires a LaTeX installation from 2021 or later with `tcolorbox`, `mathastext`, `enumitem`, `caption` and `kvoptions` (all in a full TeX Live or MiKTeX). Tested with TeX Live 2023 and overleaf.
+Requires a LaTeX installation from 2021 or later with `tcolorbox`, `mathastext`, `enumitem`, `caption` and `kvoptions` (all in a full TeX Live or MiKTeX). Tested with TeX Live 2023 and Overleaf.
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `uclposter.cls` | the poster class defining how everything looks|
+| `uclposter.cls` | the poster class defining how everything looks |
 | `poster.tex`, `poster.pdf` | a starting poster and its output |
 | `layouts.tex`, `layouts.pdf` | the template's eight sample layouts, one per page, to copy or adapt |
-| `fonts/` | UCL Sans (`.otf` and `.ttf`)|
+| `fonts/` | UCL Sans (`.otf` and `.ttf`) and its licence, `OFL.txt` |
 | `logos/` | the two UCL logos used on the banner |
 
 Keep `uclposter.cls`, `fonts/` and `logos/` next to your `.tex` file.
@@ -82,7 +82,7 @@ Figures and tables are not floats inside a box: use `\includegraphics` and `\cap
 The template uses **UCL Sans** for body text and **UCL Sans SemiBold** for the title, authors and headings. The class looks for the font in this order and prints the one it used at the end of the log (`uclposter: text font = ...`):
 
 1. UCL Sans installed on the computer;
-2. the files in `fonts/` (`UCLSans-Regular`, `-Italic`, `-Bold`, `-SemiBold`, `-SemiBoldItalic`, `-ExtraLight`, `-ExtraLightItalic`);
+2. the files in `fonts/` (it loads four: `UCLSans-Regular`, `-Italic`, `-SemiBold`, `-SemiBoldItalic`);
 3. Aptos, UCL's stated fallback;
 4. TeX Gyre Heros, with a warning.
 
@@ -114,4 +114,4 @@ Letters and digits in maths are set in UCL Sans (via `mathastext`) so that equat
 
 Built using [tcolorbox](https://ctan.org/pkg/tcolorbox) (poster library) and [mathastext](https://ctan.org/pkg/mathastext).
 
-This project aims to replicate the work of the unnoficial UCL LaTeX templates for the previous brand: [UCL/ucl-beamer](https://github.com/UCL/ucl-beamer) and [kinianlo/ucl-tikzposter](https://github.com/kinianlo/ucl-tikzposter).
+This project does for the new brand what earlier LaTeX templates did for the previous one: [UCL/ucl-beamer](https://github.com/UCL/ucl-beamer) and [kinianlo/ucl-tikzposter](https://github.com/kinianlo/ucl-tikzposter). It shares no code with them.
