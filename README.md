@@ -2,7 +2,7 @@
 
 A LaTeX class for research posters that resemble UCL's current A0 portrait PowerPoint template (`UCL-A0_Poster_Template-Portrait.pptx`: new logo, UCL Sans, dark purple banner).
 
-**Unofficial.** This template not produced or endorsed by UCL, UCL provides poster templates in PowerPoint format (.pptx) through the [UCL Brand resources](https://imagestore.ucl.ac.uk/imagestore/files/ucl-new-templates/UCL/UCL%20A0%20Academic%20Posters/UCL-A0%20Poster%20Template-Portrait.pptx). However, it does not provide LaTeX poster templates. This repository aims provides a recreation that follows UCL's Brand Guidelines for students and staff who prefer LaTeX.
+**Unofficial.** This template not produced or endorsed by UCL, UCL provides poster templates in PowerPoint format (.pptx) through the [UCL Brand resources](https://imagestore.ucl.ac.uk/imagestore/files/ucl-new-templates/UCL/UCL%20A0%20Academic%20Posters/UCL-A0%20Poster%20Template-Portrait.pptx). However, it does not provide LaTeX poster templates. This repository provides a recreation that follows UCL's Brand Guidelines for students and staff who prefer LaTeX.
 
 <img src="preview.png" alt="Example poster" width="420">
 
