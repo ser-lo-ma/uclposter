@@ -1,0 +1,99 @@
+% UCL A0 portrait poster. Compile with LuaLaTeX or XeLaTeX (pdfLaTeX works, but it won't load UCL Sans).
+%
+% Class options:
+%   banner=dark | light   dark purple banner (default) or plain banner
+%   showgrid              overlay the template guides and the 12 x 6 grid
+%   sansmath=false        leave maths in Computer Modern
+%   fontdir=fonts/        folder holding UCLSans-*.otf if UCL Sans is not installed
+%   font=<name>           use another installed font family instead
+\documentclass[banner=dark]{uclposter}
+
+\usepackage{booktabs}
+\usepackage{siunitx}
+\sisetup{mode=text}  % numbers and units in the text font
+
+\title{Poster title in UCL Sans SemiBold at 72 pt, left aligned, running to three lines at most}
+\author{First Author\textsuperscript{1}, Second Author\textsuperscript{1,2}, Third Author\textsuperscript{2}}
+\affiliation{\textsuperscript{1}Department, UCL\\ \textsuperscript{2}Partner institution}
+\contact{name@ucl.ac.uk\\ ucl.ac.uk/your-group}
+\footerlogos{Collaborator logos go here, never on the banner:
+  \texttt{\textbackslash includegraphics[height=40mm]\{logo\}}}
+
+\begin{document}
+\begin{uclposter}
+
+% Boxes sit on a 12-column x 6-row grid over the content area.
+% column/row give the top-left cell, span/rowspan the size.
+% layouts.tex has the template's other layouts ready to copy.
+
+\posterbox[title=Introduction]{column=1,span=6,row=1,rowspan=2}{
+  Aim for 300--600 words in total, concise and straight to the point.
+
+  Body text is 36 pt and left aligned. Keep everything at 24 pt or above;
+  only captions may be smaller.
+  \begin{itemize}
+    \item Use bullet points to break up large areas of text.
+    \item Set headings in bold.
+    \item Use one or two colours, plus images and charts.
+  \end{itemize}
+
+  {\small References and acknowledgements can go down to
+  \texttt{\textbackslash small} (28.6 pt) or
+  \texttt{\textbackslash footnotesize} (24 pt).}
+}
+
+\posterbox[title=Methods]{column=1,span=6,row=3,rowspan=2}{
+  Letters and digits in maths are set in the text font:
+  \begin{equation*}
+    E_\gamma' = \frac{E_\gamma}{1+(E_\gamma/m_e c^2)(1-\cos\theta)}
+  \end{equation*}
+  UCL Sans has no Greek letters, so Greek and maths symbols come from
+  Computer Modern.
+}
+
+\posterbox[ucl plain,title=A third box]{column=1,span=6,row=5,rowspan=2}{
+  A box is as tall as its \texttt{rowspan} says, whatever it holds. If the
+  content is too tall, the log carries a warning and \texttt{showgrid} marks
+  the box in pink.
+
+  Sample layouts are in \texttt{layouts.tex}. Pick one of these, or make
+  your own: \texttt{column} and \texttt{span} set a box's starting column
+  and width, \texttt{row} and \texttt{rowspan} its starting row and height.
+  \texttt{layouts.pdf} shows the grid.
+}
+
+\posterbox[title=Results]{column=7,span=6,row=1,rowspan=4}{
+  Insert figures as files: PDF where possible, raster images at 150 dpi or
+  more at printed size.
+  \begin{center}
+    % Replace with \includegraphics[width=\linewidth]{figure.pdf}
+    \begin{tikzpicture}
+      \fill[UCLWhite] (0,0) rectangle (\linewidth,0.6\linewidth);
+      \node[text=UCLPurple] at (0.5\linewidth,0.3\linewidth) {Figure};
+    \end{tikzpicture}
+    \captionof{figure}{A figure caption, set at 24 pt.}
+  \end{center}
+  \begin{center}
+    \begin{tabular}{lSS}
+      \toprule
+      Setting & {Value (\unit{\second})} & {Ratio} \\
+      \midrule
+      First  & 1200 & 1.0 \\
+      Second & 310  & 3.9 \\
+      Third  & 95   & 12.6 \\
+      \bottomrule
+    \end{tabular}
+    \captionof{table}{A table caption.}
+  \end{center}
+}
+
+\posterbox[ucl dark,title=Conclusions]{column=7,span=6,row=5,rowspan=2}{
+  \begin{itemize}
+    \item Add \texttt{ucl dark} to a box to make it stand out.
+    \item Add \texttt{ucl plain} for a box with no fill.
+    \item Every other box keeps the template's pale purple.
+  \end{itemize}
+}
+
+\end{uclposter}
+\end{document}

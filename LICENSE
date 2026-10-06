@@ -21,4 +21,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 This licence covers uclposter.cls and the example .tex and .pdf files only.
-It does not cover the files in fonts/ (SIL Open Font License) or the UCL logos in logos/ (property of UCL).
+It does not cover the files in fonts/ (SIL Open Font License) or the UCL logos
+in logos/ (property of UCL).

@@ -1,0 +1,88 @@
+% The eight sample layouts provided on the UCL PowerPoint templates, one per page
+% on a class's 12 x 6 grid. Copy the one you want to use into poster.tex.
+% (showgrid draws the grid in red and the template guides in pink.)
+
+\documentclass[banner=dark,showgrid]{uclposter}
+
+\title{Layout gallery: pick one layout}
+\author{Authors}
+\affiliation{Affiliation}
+\contact{Contact details}
+\footerlogos{Collaborator logos}
+
+\newcommand\layoutname[1]{\textbf{#1}\par}
+
+\begin{document}
+
+% 1 -- banner only ("2 column guides")
+\begin{uclposter}
+\end{uclposter}
+\newpage
+
+% 2 -- 2 columns
+\begin{uclposter}
+\posterbox[title=2 columns]{column=1,span=6,row=1,rowspan=6}{Left}
+\posterbox{column=7,span=6,row=1,rowspan=6}{Right}
+\end{uclposter}
+\newpage
+
+% 3 -- 2 columns with 4 boxes
+\begin{uclposter}
+\posterbox[title=2 columns with 4 boxes]{column=1,span=6,row=1,rowspan=3}{Top left}
+\posterbox{column=7,span=6,row=1,rowspan=3}{Top right}
+\posterbox{column=1,span=6,row=4,rowspan=3}{Bottom left}
+\posterbox{column=7,span=6,row=4,rowspan=3}{Bottom right}
+\end{uclposter}
+\newpage
+
+% 4 -- 2 columns with 6 boxes
+\begin{uclposter}
+\posterbox[title=2 columns with 6 boxes]{column=1,span=6,row=1,rowspan=2}{1}
+\posterbox{column=7,span=6,row=1,rowspan=2}{2}
+\posterbox{column=1,span=6,row=3,rowspan=2}{3}
+\posterbox{column=7,span=6,row=3,rowspan=2}{4}
+\posterbox{column=1,span=6,row=5,rowspan=2}{5}
+\posterbox{column=7,span=6,row=5,rowspan=2}{6}
+\end{uclposter}
+\newpage
+
+% 5 -- section header: full-width strips above and below four boxes
+\begin{uclposter}
+\posterbox[title=Section header]{column=1,span=12,row=1,rowspan=1}{Summary strip}
+\posterbox{column=1,span=6,row=2,rowspan=2}{1}
+\posterbox{column=7,span=6,row=2,rowspan=2}{2}
+\posterbox{column=1,span=6,row=4,rowspan=2}{3}
+\posterbox{column=7,span=6,row=4,rowspan=2}{4}
+\posterbox{column=1,span=12,row=6,rowspan=1}{Closing strip}
+\end{uclposter}
+\newpage
+
+% 6 -- 5 boxes
+\begin{uclposter}
+\posterbox[title=5 boxes]{column=1,span=12,row=1,rowspan=1}{Summary strip}
+\posterbox{column=1,span=6,row=2,rowspan=2}{1}
+\posterbox{column=1,span=6,row=4,rowspan=3}{2}
+\posterbox{column=7,span=6,row=2,rowspan=4}{3}
+\posterbox{column=7,span=6,row=6,rowspan=1}{4}
+\end{uclposter}
+\newpage
+
+% 7 -- 6 boxes, narrow left column
+\begin{uclposter}
+\posterbox[title=6 boxes]{column=1,span=5,row=1,rowspan=2}{1}
+\posterbox{column=1,span=5,row=3,rowspan=3}{2}
+\posterbox{column=6,span=7,row=1,rowspan=3}{3}
+\posterbox{column=6,span=7,row=4,rowspan=2}{4}
+\posterbox{column=1,span=6,row=6,rowspan=1}{5}
+\posterbox{column=7,span=6,row=6,rowspan=1}{6}
+\end{uclposter}
+\newpage
+
+% 8 -- 3 columns
+\begin{uclposter}
+\posterbox[title=3 columns]{column=1,span=4,row=1,rowspan=6}{Left}
+\posterbox{column=5,span=4,row=1,rowspan=6}{Middle}
+\posterbox{column=9,span=4,row=1,rowspan=6}{Right}
+\end{uclposter}
+
+\end{document}
